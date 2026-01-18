@@ -17,11 +17,11 @@ MAX_TRIALS=5
 while trial_index<MAX_TRIALS:
 
     trial_word=input(f"ENTER {trial_index+1}: ")
-    if trial_word not in words:
-        print("INVALID WORD ENTER AGAIN")
-        continue
     if len(trial_word) != 5:
         print("INVALID WORD LENGTH")
+        continue
+    if trial_word not in words:
+        print("INVALID WORD ENTER AGAIN")
         continue
     trial_index += 1
     if trial_word == chosen_word:
@@ -50,5 +50,6 @@ print(chosen_word)
 
 
             
+
 
 
